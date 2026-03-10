@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="260" height="70" role="img" aria-label="Wellness logo">
+  <defs>
+    <linearGradient id="orbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b7d9b6" />
+      <stop offset="55%" stop-color="#7fae8d" />
+      <stop offset="100%" stop-color="#4b6d5f" />
+    </linearGradient>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f4f2ec" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(6,8)">
+    <circle cx="27" cy="27" r="24" fill="url(#orbGradient)" />
+    <path d="M8 30 C14 20, 24 20, 30 30 C36 40, 46 40, 52 30" fill="none" stroke="url(#waveGradient)" stroke-width="4" stroke-linecap="round" />
+    <circle cx="40" cy="15" r="3" fill="#ffffff" opacity="0.85" />
+  </g>
+
+  <text x="70" y="34" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" fill="#3f564a" letter-spacing="0.4">
+    Wellness
+  </text>
+  <text x="71" y="52" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="11" font-weight="500" fill="#6f8f7f" letter-spacing="2.4">
+    HEALTH FLOW
+  </text>
+</svg>

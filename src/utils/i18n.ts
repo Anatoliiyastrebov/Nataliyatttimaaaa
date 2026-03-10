@@ -50,7 +50,7 @@ const translations: Record<Language, Translations> = {
       title: 'Политика конфиденциальности',
       content: 'Информация о владельце сайта и обработке данных',
       owner: 'Владелец сайта',
-      name: 'Надежда',
+      name: 'Надежда Тимофеева',
       profession: 'Wellness-консультант',
       contact: 'Контактная информация',
       contactTextRu: 'Для связи используйте форму обратной связи на главной странице.',

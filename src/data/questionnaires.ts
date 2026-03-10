@@ -522,7 +522,7 @@ export const childrenQuestionnaire: Questionnaire = {
       otherLabelEn: 'Please provide additional information'
     },
     {
-      id: 'q26',
+      id: 'q14',
       type: 'radio',
       label: 'Есть ли у вас анализы крови за последние 2-3 месяца? УЗИ?',
       labelEn: 'Do you have blood tests from the last 2-3 months? Ultrasound (USG)?',
@@ -532,9 +532,9 @@ export const childrenQuestionnaire: Questionnaire = {
         { value: 'no', label: 'Нет', labelEn: 'No' }
       ],
       conditionalFields: [{
-        condition: { fieldId: 'q26', value: 'yes' },
+        condition: { fieldId: 'q14', value: 'yes' },
         fields: [{
-          id: 'q26_files',
+          id: 'q14_files',
           type: 'file',
           label: 'Загрузите анализы (любые форматы)',
           labelEn: 'Upload tests (any file formats)',
@@ -545,13 +545,25 @@ export const childrenQuestionnaire: Questionnaire = {
       }]
     },
     {
-      id: 'q14',
+      id: 'q15',
       type: 'textarea',
       label: 'Что ещё важно знать о здоровье ребёнка',
       labelEn: 'What else is important to know about the child’s health',
       placeholder: 'Дополнительная информация',
       placeholderEn: 'Additional information',
       required: true
+    },
+    {
+      id: 'q16',
+      type: 'checkbox',
+      label: 'Откуды вы узнали обо мне ?',
+      labelEn: 'How did you find out about me?',
+      required: true,
+      options: [
+        { value: 'none', label: 'Telegram ', labelEn: 'Telegram ' },
+        { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
+        { value: 'recommendation', label: 'По рекомендации друга', labelEn: 'By recommendation of a friend' },
+      ],
     },
     {
       id: 'contact_telegram',

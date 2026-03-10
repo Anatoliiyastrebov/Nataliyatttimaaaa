@@ -2,15 +2,11 @@
 import { getQuestionnaireById, type QuestionField } from '../data/questionnaires';
 import html2pdf from 'html2pdf.js';
 
-const TELEGRAM_RELAY_BASE_URL = (import.meta.env.VITE_TELEGRAM_RELAY_BASE_URL || '').replace(/\/$/, '');
+const TELEGRAM_RELAY_BASE_URL = '/api/telegram';
 const TELEGRAM_REQUEST_TIMEOUT_MS = 300000;
 const TELEGRAM_FILE_MAX_SIZE = 50 * 1024 * 1024;
 
 function isRelayConfigured(): boolean {
-  if (!TELEGRAM_RELAY_BASE_URL) {
-    console.error('Telegram relay URL is not configured');
-    return false;
-  }
   return true;
 }
 

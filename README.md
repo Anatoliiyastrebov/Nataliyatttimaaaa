@@ -52,11 +52,25 @@ npm run dev
 
 ## Настройка фронтенда
 
-1. Создайте `.env` в корне проекта на основе `.env.example`
-2. Укажите URL relay-сервера:
+Во фронтенде ничего настраивать не нужно: используется фиксированный путь `/api/telegram`.
 
-```env
-VITE_TELEGRAM_RELAY_BASE_URL=https://your-relay-domain.com
+Для локальной разработки Vite уже проксирует `/api/telegram/*` на `http://localhost:8080/*`.
+
+Для Vercel укажи адрес relay в `vercel.json`:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/api/telegram/(.*)",
+      "destination": "https://your-relay-domain.com/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
 ```
 
 ## Relay-сервер (без Vercel Functions)

@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/telegram/(.*)",
+      "destination": "https://your-relay-domain.com/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

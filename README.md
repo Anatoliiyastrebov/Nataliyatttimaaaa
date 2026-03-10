@@ -63,7 +63,7 @@ npm run dev
   "rewrites": [
     {
       "source": "/api/telegram/(.*)",
-      "destination": "https://your-relay-domain.com/$1"
+      "destination": "https://nataliyatttimaaaa.vercel.app/$1"
     },
     {
       "source": "/(.*)",
@@ -92,7 +92,7 @@ npm run dev
 PORT=8080
 TELEGRAM_BOT_TOKEN=your_bot_token
 TELEGRAM_CHAT_ID=your_chat_id
-ALLOWED_ORIGIN=https://your-frontend-domain.com
+ALLOWED_ORIGIN=https://nataliyatttimaaaa.vercel.app
 ```
 
 ### Эндпоинты relay

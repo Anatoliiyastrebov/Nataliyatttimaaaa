@@ -110,7 +110,7 @@ const translations: Record<Language, Translations> = {
       owner: 'Website Owner',
       name: 'Nadezhda',
       profession: 'Wellness Consultant',
-      contact: 'Contact Information',
+      contact: '+7 908 871 6869',
       contactTextRu: 'For contact please use the feedback form on the main page.',
       contactTextEn: 'Contact us through the feedback form on the main page.',
       dataProtection: 'Data Protection',

@@ -304,6 +304,21 @@ export const babiesQuestionnaire: Questionnaire = {
       required: true
     },
     {
+      id: 'q19',
+      type: 'radio',
+      label: 'Откуды вы узнали обо мне ?',
+      labelEn: 'How did you find out about me?',
+      required: true,
+      options: [
+        { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
+        { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
+        { value: 'other', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
+      ],
+      allowOther: true,
+      otherLabel: 'Укажите кто порекомендовал вам меня',
+      otherLabelEn: 'Please provide the name of the person who recommended me'
+    },
+    {
       id: 'contact_telegram',
       type: 'text',
       label: 'Telegram для связи (укажите @username)',
@@ -1069,6 +1084,21 @@ export const femaleQuestionnaire: Questionnaire = {
       required: true
     },
     {
+      id: 'q29',
+      type: 'radio',
+      label: 'Откуды вы узнали обо мне ?',
+      labelEn: 'How did you find out about me?',
+      required: true,
+      options: [
+        { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
+        { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
+        { value: 'other', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
+      ],
+      allowOther: true,
+      otherLabel: 'Укажите кто порекомендовал вам меня',
+      otherLabelEn: 'Please provide the name of the person who recommended me'
+    },
+    {
       id: 'contact_telegram',
       type: 'text',
       label: 'Telegram для связи (укажите @username)',
@@ -1557,6 +1587,21 @@ export const maleQuestionnaire: Questionnaire = {
       placeholder: 'Опишите главную проблему или вопрос',
       placeholderEn: 'Describe the main problem or question',
       required: true
+    },
+    {
+      id: 'q29',
+      type: 'radio',
+      label: 'Откуды вы узнали обо мне ?',
+      labelEn: 'How did you find out about me?',
+      required: true,
+      options: [
+        { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
+        { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
+        { value: 'other', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
+      ],
+      allowOther: true,
+      otherLabel: 'Укажите кто порекомендовал вам меня',
+      otherLabelEn: 'Please provide the name of the person who recommended me'
     },
     {
       id: 'contact_telegram',

@@ -562,7 +562,7 @@ export const childrenQuestionnaire: Questionnaire = {
       options: [
         { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
         { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
-        { value: 'other', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
+        { value: 'recommendation', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
       ],
       allowOther: true,
       otherLabel: 'Укажите кто порекомендовал вам меня',

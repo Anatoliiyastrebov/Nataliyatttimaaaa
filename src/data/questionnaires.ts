@@ -562,8 +562,11 @@ export const childrenQuestionnaire: Questionnaire = {
       options: [
         { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
         { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
-        { value: 'recommendation', label: 'По рекомендации друга', labelEn: 'By recommendation of a friend' },
+        { value: 'recommendation', label: 'Рекомендация друга', labelEn: 'Recommendation of a friend', hasOther: true },
       ],
+      allowOther: true,
+      otherLabel: 'Укажите кто порекомендовал вам меня',
+      otherLabelEn: 'Please provide the name of the person who recommended me'
     },
     {
       id: 'contact_telegram',

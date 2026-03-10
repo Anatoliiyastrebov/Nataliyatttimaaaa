@@ -560,7 +560,7 @@ export const childrenQuestionnaire: Questionnaire = {
       labelEn: 'How did you find out about me?',
       required: true,
       options: [
-        { value: 'none', label: 'Telegram ', labelEn: 'Telegram ' },
+        { value: 'telegram', label: 'Telegram ', labelEn: 'Telegram ' },
         { value: 'instagram', label: 'Instagram', labelEn: 'Instagram' },
         { value: 'recommendation', label: 'По рекомендации друга', labelEn: 'By recommendation of a friend' },
       ],

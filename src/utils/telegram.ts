@@ -316,6 +316,11 @@ function createQuestionnaireHTML(
       } else {
         answerHTML = `<p style="margin: 5px 0;">${escapeHtml(String(value))}</p>`;
       }
+
+      // Для radio/select с "other" добавляем текст из поля key_other
+      if (value === 'other' && formData[`${key}_other`]) {
+        answerHTML += `<p style="margin: 5px 0;"><strong>Уточнение:</strong> ${escapeHtml(formData[`${key}_other`])}</p>`;
+      }
     }
     
     questionsHTML += `
@@ -780,6 +785,11 @@ function formatQuestionnaireMessage(
         }
       } else {
         message += `${value}\n`;
+      }
+
+      // Для radio/select с "other" добавляем текст из поля key_other
+      if (value === 'other' && formData[`${key}_other`]) {
+        message += `• Уточнение: ${formData[`${key}_other`]}\n`;
       }
     }
     message += `\n`;

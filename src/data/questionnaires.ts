@@ -306,6 +306,29 @@ export const babiesQuestionnaire: Questionnaire = {
     {
       id: 'q19',
       type: 'radio',
+      label: 'Есть ли у вас анализы крови за последние 2-3 месяца? УЗИ?',
+      labelEn: 'Do you have blood tests from the last 2-3 months? Ultrasound (USG)?',
+      required: true,
+      options: [
+        { value: 'yes', label: 'Да', labelEn: 'Yes' },
+        { value: 'no', label: 'Нет', labelEn: 'No' }
+      ],
+      conditionalFields: [{
+        condition: { fieldId: 'q19', value: 'yes' },
+        fields: [{
+          id: 'q26_files',
+          type: 'file',
+          label: 'Загрузите анализы (любые форматы)',
+          labelEn: 'Upload tests (any file formats)',
+          accept: '*',
+          multiple: true,
+          required: true
+        }]
+      }]
+    },
+    {
+      id: 'q120',
+      type: 'radio',
       label: 'Откуды вы узнали обо мне ?',
       labelEn: 'How did you find out about me?',
       required: true,

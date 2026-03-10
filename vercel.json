@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/telegram/(.*)",
-      "destination": "https://your-relay-domain.com/$1"
+      "destination": "https://nataliyatttimaaaa.vercel.app/"
     },
     {
       "source": "/(.*)",

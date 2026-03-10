@@ -1,6 +1,6 @@
 # Анкета по здоровью
 
-Полнофункциональный сайт для сбора анкет по здоровью с поддержкой двух языков (RU/EN) и безопасной отправкой в Telegram через отдельный relay-сервер.
+Полнофункциональный сайт для сбора анкет по здоровью с поддержкой двух языков (RU/EN) и безопасной отправкой в Telegram через встроенные Vercel API routes.
 
 ## Особенности
 
@@ -11,7 +11,7 @@
 - 🔄 Пошаговая навигация с индикатором прогресса
 - ✅ Валидация полей
 - 🔀 Условная логика для полей
-- 📤 Интеграция с Telegram через relay (токен скрыт от браузера)
+- 📤 Интеграция с Telegram через Vercel API (токен скрыт от браузера)
 - 📄 Страница Impressum (для соответствия европейским законам)
 - ✅ Согласие на обработку данных
 
@@ -50,56 +50,19 @@ npm run dev
 
 Файл `vercel.json` уже содержит настройки для правильной работы роутинга (все пути отдаются через `index.html`), чтобы страницы анкет и политики конфиденциальности корректно открывались по прямым ссылкам.
 
-## Настройка фронтенда
-
-Во фронтенде ничего настраивать не нужно: используется фиксированный путь `/api/telegram`.
-
-Для локальной разработки Vite уже проксирует `/api/telegram/*` на `http://localhost:8080/*`.
-
-Для Vercel укажи адрес relay в `vercel.json`:
-
-```json
-{
-  "rewrites": [
-    {
-      "source": "/api/telegram/(.*)",
-      "destination": "https://nataliyatttimaaaa.vercel.app/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
-```
-
-## Relay-сервер (без Vercel Functions)
-
-Сервис находится в `relay-server/` и может быть развернут где угодно (Railway, Render, VPS, Docker и т.д.).
-
-### Локальный запуск relay
-
-```bash
-cd relay-server
-npm install
-cp .env.example .env
-npm run dev
-```
-
-Переменные в `relay-server/.env`:
+## Настройка Telegram на Vercel
 
 ```env
-PORT=8080
 TELEGRAM_BOT_TOKEN=your_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
-ALLOWED_ORIGIN=https://nataliyatttimaaaa.vercel.app
+TELEGRAM_CHAT_ID=-1003757895437
 ```
 
-### Эндпоинты relay
+Добавь эти переменные в настройках проекта на Vercel (`Settings -> Environment Variables`).
 
-- `POST /sendMessage` — принимает JSON: `{ "text": "...", "parse_mode": "HTML" }`
-- `POST /sendDocument` — принимает multipart: `document` и опционально `caption`
-- `GET /health` — healthcheck
+### Встроенные API routes
+
+- `POST /api/telegram/sendMessage` — принимает JSON: `{ "text": "...", "parse_mode": "HTML" }`
+- `POST /api/telegram/sendDocument` — принимает multipart: `document` и опционально `caption`
 
 ## Структура проекта
 

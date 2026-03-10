@@ -2,7 +2,7 @@
 import { getQuestionnaireById, type QuestionField } from '../data/questionnaires';
 import html2pdf from 'html2pdf.js';
 
-const TELEGRAM_RELAY_BASE_URL = '/api/telegram';
+const TELEGRAM_API_BASE_PATH = '/api/telegram';
 const TELEGRAM_REQUEST_TIMEOUT_MS = 300000;
 const TELEGRAM_FILE_MAX_SIZE = 50 * 1024 * 1024;
 
@@ -19,7 +19,7 @@ async function postToRelay(
   const timeoutId = setTimeout(() => controller.abort(), TELEGRAM_REQUEST_TIMEOUT_MS);
 
   try {
-    const response = await fetch(`${TELEGRAM_RELAY_BASE_URL}/${endpoint}`, {
+    const response = await fetch(`${TELEGRAM_API_BASE_PATH}/${endpoint}`, {
       method: 'POST',
       headers: isJson ? { 'Content-Type': 'application/json' } : undefined,
       body,

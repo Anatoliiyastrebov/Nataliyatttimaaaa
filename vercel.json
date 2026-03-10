@@ -1,11 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/api/telegram/:path*",
-      "destination": "https://nataliyatttimaaaa.vercel.app/:path*"
-    },
-    {
-      "source": "/:path*",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]

@@ -8,9 +8,8 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api/telegram': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/telegram/, '')
+        target: 'https://nataliyatttimaaaa.vercel.app',
+        changeOrigin: true
       }
     }
   }

@@ -555,7 +555,7 @@ export const childrenQuestionnaire: Questionnaire = {
     },
     {
       id: 'q16',
-      type: 'checkbox',
+      type: 'radio',
       label: 'Откуды вы узнали обо мне ?',
       labelEn: 'How did you find out about me?',
       required: true,
